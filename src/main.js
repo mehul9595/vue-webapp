@@ -36,9 +36,6 @@ const router = new VueRouter({
 
 // authentication middle-ware 
 firebaseApp.auth().onAuthStateChanged(user => {
-  console.log(process.env.VUE_APP_TEST_KEY);
-  console.log(process.env.TEST_KEY);
-
   if (user) {
     store.dispatch('signin', user);
     if (router.currentRoute.path !== '/dashboard') {
