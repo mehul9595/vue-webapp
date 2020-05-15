@@ -17,3 +17,9 @@ export const signup = ({
 }) => {
     commit(types.SIGN_UP);
 }
+
+export const setEvents = ({
+    commit
+}, events_payload) => {
+    commit(types.EVENTS_COLLECTION, events_payload);
+};

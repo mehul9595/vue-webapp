@@ -11,5 +11,9 @@ export const mutations = {
 
     [types.SIGN_UP](state) {
         console.log(state);
+    },
+
+    [types.EVENTS_COLLECTION](state, events_payload) {
+        state.events = events_payload;
     }
 }

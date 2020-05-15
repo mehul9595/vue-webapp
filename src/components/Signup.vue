@@ -44,7 +44,7 @@ export default {
     },
     methods: {
         onSignup() {
-            // this.$store.dispatch('signup')
+            this.$store.dispatch('signup')
             firebaseApp.auth().createUserWithEmailAndPassword(this.email, this.password)
                 .catch(err=>{
                     this.error = err
